@@ -1,0 +1,14 @@
+version: "3"
+services:
+   node-app:
+    container_name: my-new-app-cont
+    build:
+      context: .
+      target:  development
+    environment:
+      - node-env=development
+    volumes:
+      - ./src:/app/src:ro
+    command: ["npm", "run" ,"start-dev"]
+    
+    

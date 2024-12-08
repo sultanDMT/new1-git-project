@@ -1,0 +1,11 @@
+version: "3"
+services:
+   node-app:
+    container_name: my-new-app-cont
+    build:
+      context: .
+      target:  production
+      
+    environment:
+      - node-env=production
+    command: ["npm", "start"]
